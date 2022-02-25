@@ -72,14 +72,14 @@ public class LoginServlet extends HttpServlet {
 					response.sendRedirect("/HelloWorldJavaEE/UserServlet/dashboard");
 				}else {
 					PrintWriter writer = response.getWriter();
-					writer.println("<h1> Either email or password is incorrect</h1>");
+					writer.println("<h1 id = 'response'>Either email or password is incorrect</h1>");
 					writer.close();
 				}
 				user = new User(name, password, email, "");
 			}
 			if(!rs.next()) {
 				PrintWriter writer = response.getWriter();
-				writer.println("<h1> User does not exist</h1>");
+				writer.println("<h1 id = 'response'>User does not exist</h1>");
 				writer.close();
 			}
 		}catch (Exception e) {

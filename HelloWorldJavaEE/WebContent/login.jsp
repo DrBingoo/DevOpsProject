@@ -11,7 +11,7 @@
 	<form action = "LoginServlet" method = "post">
 		Enter your email: <input type = "email" name = "email" size = 20>
 		Enter your password: <input type = "password" name = "password" size = 20>
-		<input type = "submit" value = "Login">
+		<input id = "submitbtn" type = "submit" value = "Login">
 	</form>
 			<a href="<%=request.getContextPath()%>/register.jsp">Register Page Here</a> 
 </body>
